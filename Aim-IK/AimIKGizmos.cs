@@ -25,7 +25,7 @@ namespace AimIK
             if(aimIKBehaviour) // If aimIKBehaviour exists
             {
                 Gizmos.color = Color.blue;
-                Gizmos.DrawLine(aimIKBehaviour.head.position, aimIKBehaviour.target.position);
+                Gizmos.DrawLine(aimIKBehaviour.head.position + aimIKBehaviour.eyesOffset, aimIKBehaviour.target.position);
             }
         }
     }
