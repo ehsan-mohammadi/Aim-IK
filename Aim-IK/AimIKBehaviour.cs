@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AimIK
 {
@@ -12,7 +10,7 @@ namespace AimIK
         /// <summary>
         /// LateUpdate called after Update and FixedUpdate functions each frames. This function is on top of any animation.
         /// </summary>
-        public void LateUpdate()
+        private void LateUpdate()
         {
             head.LookAt(target);
         }
