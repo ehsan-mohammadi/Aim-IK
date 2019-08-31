@@ -7,6 +7,7 @@ namespace AimIK
     public class AimIKGizmos : MonoBehaviour
     {
         AimIKBehaviour aimIKBehaviour;
+        public Color aimGizmoLineColor = Color.blue;
 
         /// <summary>
         /// The Awake function called first of all
@@ -24,7 +25,7 @@ namespace AimIK
         {
             if(aimIKBehaviour) // If aimIKBehaviour exists
             {
-                Gizmos.color = Color.blue;
+                Gizmos.color = aimGizmoLineColor;
                 Gizmos.DrawLine(aimIKBehaviour.head.position + aimIKBehaviour.eyesOffset, aimIKBehaviour.target.position);
             }
         }
