@@ -7,9 +7,8 @@ namespace AimIK
     public class AimIKGizmos : MonoBehaviour
     {
         AimIKBehaviour aimIKBehaviour;
-        public bool showHeadLine = false;
         
-        [HideInInspector]
+        public bool showHeadLine = false;
         public Color headLineColor = Color.blue;
 
         /// <summary>
