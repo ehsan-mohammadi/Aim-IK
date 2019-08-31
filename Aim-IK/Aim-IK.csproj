@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AimIKBehaviour.cs" />
     <Compile Include="AimIKGizmos.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
