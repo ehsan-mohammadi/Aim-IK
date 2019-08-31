@@ -38,12 +38,16 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Program Files\Unity\Unity5.5.1f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\Unity\Unity5.5.1f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AimIKBehaviour.cs" />
+    <Compile Include="AimIKEditor.cs" />
     <Compile Include="AimIKGizmos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
