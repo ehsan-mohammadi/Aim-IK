@@ -2,12 +2,16 @@
 
 namespace AimIK
 {
+    using Properties;
+
     public class AimIKBehaviour : MonoBehaviour
     {
         public Transform head;
         public Transform target;
 
         public Vector3 eyesOffset;
+
+        public LimitRotation headLimitRotation;
         
         /// <summary>
         /// LateUpdate called after Update and FixedUpdate functions each frames. This function is on top of any animation.
