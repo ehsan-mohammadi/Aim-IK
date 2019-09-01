@@ -14,34 +14,37 @@ namespace AimIK
 
         public LimitRotation headLimitRotation;
 
-        private float headRotationX;
-        private float headRotationY;
-        private float headRotationZ;
+        private Rotation headRotation = new Rotation();
+
+        public ChestPart[] chestParts;
 
         /// <summary>
         /// Check the clamp
         /// </summary>
-        private void CheckClamp()
+        /// <param name="part">The input part transform</param>
+        /// <param name="limitRotation">The input limit rotation</param>
+        /// <param name="rotation">The input rotation</param>
+        private void CheckClamp(Transform part, LimitRotation limitRotation, Rotation rotation)
         {
             // Clamp (If activate)
-            if (headLimitRotation.xLimitRotation.active)
-                headRotationX = AimIKFunctions.ClampAngle(head.localEulerAngles.x, headLimitRotation.xLimitRotation.min, headLimitRotation.xLimitRotation.max);
+            if (limitRotation.xLimitRotation.active)
+                rotation.xRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.x, limitRotation.xLimitRotation.min, limitRotation.xLimitRotation.max);
             else
-                headRotationX = head.localEulerAngles.x;
+                rotation.xRotation = part.localEulerAngles.x;
 
-            if (headLimitRotation.yLimitRotation.active)
-                headRotationY = AimIKFunctions.ClampAngle(head.localEulerAngles.y, headLimitRotation.yLimitRotation.min, headLimitRotation.yLimitRotation.max);
+            if (limitRotation.yLimitRotation.active)
+                rotation.yRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.y, limitRotation.yLimitRotation.min, limitRotation.yLimitRotation.max);
             else
-                headRotationY = head.localEulerAngles.y;
+                rotation.yRotation = part.localEulerAngles.y;
 
-            if (headLimitRotation.zLimitRotation.active)
-                headRotationZ = AimIKFunctions.ClampAngle(head.localEulerAngles.z, headLimitRotation.zLimitRotation.min, headLimitRotation.zLimitRotation.max);
+            if (limitRotation.zLimitRotation.active)
+                rotation.zRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.zLimitRotation.min, limitRotation.zLimitRotation.max);
             else
-                headRotationZ = head.localEulerAngles.z;
+                rotation.zRotation = part.localEulerAngles.z;
 
             // Set rotation variables to head rotation
-            Vector3 headRotation = new Vector3(headRotationX, headRotationY, headRotationZ);
-            head.localEulerAngles = headRotation;
+            Vector3 partRotation = new Vector3(rotation.xRotation, rotation.yRotation, rotation.zRotation);
+            part.localEulerAngles = partRotation;
         }
         
         /// <summary>
@@ -49,9 +52,25 @@ namespace AimIK
         /// </summary>
         private void LateUpdate()
         {
-            head.LookAt(target.position - eyesOffset);
+            // Check the chest parts
+            if(chestParts.Length > 0)
+            {
+                foreach(ChestPart chestPart in chestParts)
+                {
+                    if(chestPart.part && target) // If chest part and target exists
+                    {
+                        chestPart.part.LookAt(target.position);
+                        CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
+                    }
+                }
+            }
 
-            CheckClamp();
+            // If head and target exists
+            if(head && target)
+            {
+                head.LookAt(target.position - eyesOffset);
+                CheckClamp(head, headLimitRotation, headRotation);
+            }
         }
     }
 }

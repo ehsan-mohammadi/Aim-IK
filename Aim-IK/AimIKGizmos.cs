@@ -23,7 +23,7 @@ namespace AimIK
         /// <summary>
         /// Draw Gizmos
         /// </summary>
-        public void OnDrawGizmos()
+        private void OnDrawGizmos()
         {
             if(aimIKBehaviour) // If aimIKBehaviour exists
             {
