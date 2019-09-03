@@ -28,8 +28,10 @@ namespace AimIK.Gizmos
 
         private void Update()
         {
-            if (part && part != exPart)
+            if (part != exPart)
             {
+                bool found = false;
+
                 // Find the part
                 if (aimIKBehaviour.chestParts.Length > 0)
                 {
@@ -39,8 +41,15 @@ namespace AimIK.Gizmos
                         {
                             this.chestPart = chestPart;
                             exPart = part;
+                            found = true;
                             break;
                         }
+                    }
+
+                    if(!found)
+                    {
+                        this.chestPart = null;
+                        part = exPart = null;
                     }
                 }
             }
