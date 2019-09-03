@@ -27,23 +27,23 @@ namespace AimIK
         private void CheckClamp(Transform part, LimitRotation limitRotation, Rotation rotation)
         {
             // Clamp (If activate)
-            if (limitRotation.xLimitRotation.active)
-                rotation.xRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.x, limitRotation.xLimitRotation.min, limitRotation.xLimitRotation.max);
+            if (limitRotation.x.active)
+                rotation.x = AimIKFunctions.ClampAngle(part.localEulerAngles.x, limitRotation.x.min, limitRotation.x.max);
             else
-                rotation.xRotation = part.localEulerAngles.x;
+                rotation.x = part.localEulerAngles.x;
 
-            if (limitRotation.yLimitRotation.active)
-                rotation.yRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.y, limitRotation.yLimitRotation.min, limitRotation.yLimitRotation.max);
+            if (limitRotation.y.active)
+                rotation.y = AimIKFunctions.ClampAngle(part.localEulerAngles.y, limitRotation.y.min, limitRotation.y.max);
             else
-                rotation.yRotation = part.localEulerAngles.y;
+                rotation.y = part.localEulerAngles.y;
 
-            if (limitRotation.zLimitRotation.active)
-                rotation.zRotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.zLimitRotation.min, limitRotation.zLimitRotation.max);
+            if (limitRotation.z.active)
+                rotation.z = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.z.min, limitRotation.z.max);
             else
-                rotation.zRotation = part.localEulerAngles.z;
+                rotation.z = part.localEulerAngles.z;
 
             // Set rotation variables to head rotation
-            Vector3 partRotation = new Vector3(rotation.xRotation, rotation.yRotation, rotation.zRotation);
+            Vector3 partRotation = new Vector3(rotation.x, rotation.y, rotation.z);
             part.localEulerAngles = partRotation;
         }
         
@@ -59,7 +59,7 @@ namespace AimIK
                 {
                     if(chestPart.part && target) // If chest part and target exists
                     {
-                        chestPart.part.LookAt(target.position);
+                        chestPart.part.LookAt(target.position - chestPart.offset);
                         CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
                     }
                 }
