@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using AimIK;
 
-namespace AimIK
+namespace AimIK.Gizmos
 {
     [RequireComponent(typeof(AimIKBehaviour))]
-    public class AimIKGizmos : MonoBehaviour
+    public class HeadGizmos : MonoBehaviour
     {
-        AimIKBehaviour aimIKBehaviour;
+        private AimIKBehaviour aimIKBehaviour;
         
         public bool showHeadLine = false;
         public Color headLineColor = Color.blue;
@@ -29,8 +29,8 @@ namespace AimIK
             {
                 if(showHeadLine)
                 {
-                    Gizmos.color = headLineColor;
-                    Gizmos.DrawLine(aimIKBehaviour.head.position + aimIKBehaviour.eyesOffset, aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.color = headLineColor;
+                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.position + aimIKBehaviour.eyesOffset, aimIKBehaviour.target.position);
                 }
             }
         }

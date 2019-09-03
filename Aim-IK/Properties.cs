@@ -21,9 +21,9 @@ namespace AimIK.Properties
     [Serializable]
     public class LimitRotation
     {
-        public AxisLimitRotation xLimitRotation;
-        public AxisLimitRotation yLimitRotation;
-        public AxisLimitRotation zLimitRotation;
+        public AxisLimitRotation x;
+        public AxisLimitRotation y;
+        public AxisLimitRotation z;
     }
 
     /// <summary>
@@ -31,9 +31,9 @@ namespace AimIK.Properties
     /// </summary>
     public class Rotation
     {
-        public float xRotation;
-        public float yRotation;
-        public float zRotation;
+        public float x;
+        public float y;
+        public float z;
     }
 
     /// <summary>
@@ -43,6 +43,7 @@ namespace AimIK.Properties
     public class ChestPart
     {
         public Transform part;
+        public Vector3 offset;
         public LimitRotation limitRotation;
         private Rotation rotation = new Rotation();
         
