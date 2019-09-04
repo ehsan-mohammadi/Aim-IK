@@ -4,6 +4,8 @@
 
 [![License](https://img.shields.io/github/license/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=License)](../master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-1.0)
+[![Total Dwonloads](https://img.shields.io/github/downloads/ehsan-mohammadi/Aim-IK/total?color=%23fc505e&label=Total%20Downloads)](https://github.com/ehsan-mohammadi/Aim-IK/releases)
+<br />
 [![Download DLL](https://img.shields.io/badge/Download-DLL%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll)
 [![Download Unity Package](https://img.shields.io/badge/Download-Unity%20Package%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.unitypackage)
 
@@ -26,17 +28,17 @@
 
 ## Getting started
 
-If you just want to use Aim-IK, download [`Aim-IK DLL`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll) or [`Aim-IK Unity Package`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.unitypackage) file.
+If you just want to use Aim-IK, download [`Aim-IK.dll`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll) or [`Aim-IK.unitypackage`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.unitypackage) file.
 
-For more information, read [`Wiki - How to using Aim-IK in Unity-3D?`](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Using-Aim-IK-in-Unity-3D) carefully.
+For more information, read [Wiki - How to using Aim-IK in Unity-3D?](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Using-Aim-IK-in-Unity-3D) carefully.
 
 But is you want to compile the source code, follow these steps:
 
-- Clone a copy of the repo: `git clone https://github.com/ehsan-mohammadi/Aim-IK.git`
-- Change to the Aim-IK directory: `cd Aim-IK`
+- Clone a copy of the repo:<br /> `git clone https://github.com/ehsan-mohammadi/Aim-IK.git`
+- Change to the Aim-IK directory:<br /> `cd Aim-IK`
 - Open the project in Visual Studio by clicking on `Aim-IK.sln`
 
-For more information, read [`Wiki - Compiling Aim-IK (in Visual Studio)`](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Compiling-Aim-IK) carefully.
+For more information, read [Wiki - Compiling Aim-IK (in Visual Studio)](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Compiling-Aim-IK) carefully.
 
 ## Contributing
 
