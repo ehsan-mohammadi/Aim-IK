@@ -2,10 +2,10 @@
 
 namespace AimIK.Editor
 {
-    [CustomEditor(typeof(AimIKBehaviourBase))]
     /// <summary>
     /// Check that you don't add AimIKBehaviourBase class to a GameObject
     /// </summary>
+    [CustomEditor(typeof(AimIKBehaviourBase))]
     internal class DontAddAimIKBehaviourBase : UnityEditor.Editor
     {
         void OnEnable()

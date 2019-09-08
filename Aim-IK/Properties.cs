@@ -56,4 +56,25 @@ namespace AimIK.Properties
             return rotation;
         }
     }
+
+    /// <summary>
+    /// The 2D chest part class
+    /// </summary>
+    [Serializable]
+    public class ChestPart2D
+    {
+        public Transform part;
+        public Vector2 offset;
+        public AxisLimitRotation limitRotation;
+        private float rotation;
+
+        /// <summary>
+        /// Get the current rotation of the 2D part
+        /// </summary>
+        /// <returns>The current rotation</returns>
+        public float GetRotation()
+        {
+            return rotation;
+        }
+    }
 }

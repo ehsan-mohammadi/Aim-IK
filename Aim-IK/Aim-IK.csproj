@@ -53,6 +53,7 @@
     <Compile Include="HeadGizmos.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="PartGizmos.cs" />
+    <Compile Include="PartGizmos2D.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
