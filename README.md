@@ -3,11 +3,11 @@
 >A Unity-3D library, to procedural orientate character head (and chest) in a direction without using any animation data.
 
 [![License](https://img.shields.io/github/license/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=License)](../master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?include_prereleases&color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-1.0)
+[![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?include_prereleases&color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-2.0-alpha)
 [![Total Dwonloads](https://img.shields.io/github/downloads/ehsan-mohammadi/Aim-IK/total?color=%23fc505e&label=Total%20Downloads)](https://github.com/ehsan-mohammadi/Aim-IK/releases)
 <br />
-[![Download DLL](https://img.shields.io/badge/Download-DLL%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll)
-[![Download Unity Package](https://img.shields.io/badge/Download-Unity%20Package%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.unitypackage)
+[![Download DLL](https://img.shields.io/badge/Download-DLL%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-2.0-alpha/Aim-IK.dll)
+[![Download Unity Package](https://img.shields.io/badge/Download-Unity%20Package%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-2.0-alpha/Aim-IK.unitypackage)
 
 <img src="https://github.com/ehsan-mohammadi/Aim-IK/blob/master/Images/Aim-IK-logo.png?raw=true"/>
 
