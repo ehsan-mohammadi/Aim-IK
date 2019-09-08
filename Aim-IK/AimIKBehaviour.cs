@@ -5,12 +5,8 @@ namespace AimIK
     using Properties;
     using Functions;
 
-    [DisallowMultipleComponent]
-    public class AimIKBehaviour : MonoBehaviour
+    public class AimIKBehaviour : AimIKBehaviourBase
     {
-        public Transform head;
-        public Transform target;
-
         public Vector3 eyesOffset;
 
         public LimitRotation headLimitRotation;
