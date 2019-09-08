@@ -5,6 +5,7 @@ namespace AimIK
     using Properties;
     using Functions;
 
+    [DisallowMultipleComponent]
     public class AimIKBehaviour : MonoBehaviour
     {
         public Transform head;
