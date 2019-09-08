@@ -25,7 +25,7 @@ namespace AimIK
         {
             // Clamp (If activate)
             if (limitRotation.active)
-                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.min, limitRotation.max);
+                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z + 90, limitRotation.min, limitRotation.max);
             else
                 rotation = part.localEulerAngles.z;
 
