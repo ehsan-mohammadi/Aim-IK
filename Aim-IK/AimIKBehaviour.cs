@@ -39,7 +39,7 @@ namespace AimIK
             else
                 rotation.z = part.localEulerAngles.z;
 
-            // Set rotation variables to head rotation
+            // Set rotation variables to part rotation
             Vector3 partRotation = new Vector3(rotation.x, rotation.y, rotation.z);
             part.localEulerAngles = partRotation;
         }
