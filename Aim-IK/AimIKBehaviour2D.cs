@@ -25,7 +25,7 @@ namespace AimIK
         {
             // Clamp (If activate)
             if (limitRotation.active)
-                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z + 90, limitRotation.min, limitRotation.max);
+                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.min, limitRotation.max);
             else
                 rotation = part.localEulerAngles.z;
 
@@ -45,7 +45,7 @@ namespace AimIK
             diff.Normalize();
 
             float rotateZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotateZ - 90);
+            transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
         }
 
         /// <summary>
