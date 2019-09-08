@@ -3,7 +3,7 @@
 >A Unity-3D library, to procedural orientate character head (and chest) in a direction without using any animation data.
 
 [![License](https://img.shields.io/github/license/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=License)](../master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-1.0)
+[![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?include_prereleases&color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-1.0)
 [![Total Dwonloads](https://img.shields.io/github/downloads/ehsan-mohammadi/Aim-IK/total?color=%23fc505e&label=Total%20Downloads)](https://github.com/ehsan-mohammadi/Aim-IK/releases)
 <br />
 [![Download DLL](https://img.shields.io/badge/Download-DLL%20file-%23fc505e)](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll)
@@ -17,6 +17,8 @@
 
 ## Aim-IK features
 
+### Aim-IK 3D
+
 - Control character head in a direction without using any animation data.
 - Control character chest parts in a direction without using any animation data, too.
 - Limit the head rotation in 3 axes.
@@ -26,11 +28,22 @@
 - Draw eye line.
 - Draw chest part line.
 
+### Aim-IK 2D
+
+- Control character head in a direction without using any animation data.
+- Control character chest parts in a direction without using any animation data, too.
+- Limit the head rotation in z axis.
+- Limit the chest parts rotation in z axis.
+- Eyes offset.
+- Chest part offset.
+- Draw eye line.
+- Draw chest part line.
+
 ## Getting started
 
-If you just want to use Aim-IK, download [`Aim-IK.dll`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.dll) or [`Aim-IK.unitypackage`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-1.0/Aim-IK.unitypackage) file.
+If you just want to use Aim-IK, download [`Aim-IK.dll`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-2.0-alpha/Aim-IK.dll) or [`Aim-IK.unitypackage`](https://github.com/ehsan-mohammadi/Aim-IK/releases/download/Version-2.0-alpha/Aim-IK.unitypackage) file.
 
-For more information, read [Wiki - How to using Aim-IK in Unity-3D?](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Using-Aim-IK-in-Unity-3D) carefully.
+For more information, if you want to use Aim-IK for 3D characters, read [Wiki - How to using Aim-IK in Unity-3D?](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Using-Aim-IK-in-Unity-3D) and if you want to use it for 2D characters, read [Wiki - How to using Aim-IK in Unity-2D?](https://github.com/ehsan-mohammadi/Aim-IK/wiki/Using-Aim-IK-in-Unity-2D) carefully.
 
 But is you want to compile the source code, follow these steps:
 
