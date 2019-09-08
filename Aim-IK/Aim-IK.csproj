@@ -52,6 +52,7 @@
     <Compile Include="DontAddAimIKBehaviourBase.cs" />
     <Compile Include="HeadGizmos.cs" />
     <Compile Include="Functions.cs" />
+    <Compile Include="HeadGizmos2D.cs" />
     <Compile Include="PartGizmos.cs" />
     <Compile Include="PartGizmos2D.cs" />
     <Compile Include="Properties.cs" />
