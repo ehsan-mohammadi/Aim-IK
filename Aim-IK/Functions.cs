@@ -2,7 +2,7 @@
 
 namespace AimIK.Functions
 {
-    public class AimIKFunctions
+    public static class AimIKFunctions
     {
         /// <summary>
         /// Clamp the angle between min and max
@@ -56,6 +56,20 @@ namespace AimIK.Functions
                 angle += 360;
 
             return angle;
+        }
+
+        /// <summary>
+        /// Rotates the 2D transforms so the right vector points at worldPosition
+        /// </summary>
+        /// <param name="transform">The transform that should to look at</param>
+        /// <param name="worldPosition">Point to look at</param>
+        public static void LookAt2D(this Transform transform, Vector2 worldPosition)
+        {
+            Vector2 diff = worldPosition - new Vector2(transform.position.x, transform.position.y);
+            diff.Normalize();
+
+            float rotateZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
         }
     }
 }
