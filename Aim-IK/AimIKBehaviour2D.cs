@@ -28,24 +28,10 @@ namespace AimIK
                 rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.min, limitRotation.max);
             else
                 rotation = part.localEulerAngles.z;
-
+            
             // Set rotation variables to part rotation
             Vector3 partRotation = new Vector3(part.localEulerAngles.x, part.localEulerAngles.y, rotation);
             part.localEulerAngles = partRotation;
-        }
-
-        /// <summary>
-        /// Rotates the 2D transforms so the right vector points at worldPosition
-        /// </summary>
-        /// <param name="transform">The transform that should to look at</param>
-        /// <param name="worldPosition">Point to look at</param>
-        private void LookAt2D(Transform transform, Vector2 worldPosition)
-        {
-            Vector2 diff = worldPosition - new Vector2(transform.position.x, transform.position.y);
-            diff.Normalize();
-
-            float rotateZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
         }
 
         /// <summary>
@@ -60,7 +46,7 @@ namespace AimIK
                 {
                     if (chestPart.part && target) // If chest part and target exists
                     {
-                        LookAt2D(chestPart.part, new Vector2(target.position.x, target.position.y) - eyesOffset);
+                        chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - eyesOffset);
                         CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
                     }
                 }
@@ -69,7 +55,7 @@ namespace AimIK
             // If head and target exists
             if (head && target)
             {
-                LookAt2D(head, new Vector2(target.position.x, target.position.y) - eyesOffset);
+                head.LookAt2D(new Vector2(target.position.x, target.position.y) - eyesOffset);
                 CheckClamp(head, headLimitRotation, headRotation);
             }
         }
