@@ -3,7 +3,7 @@
 namespace AimIK
 {
     [DisallowMultipleComponent]
-    public class AimIKBehaviourBase : MonoBehaviour
+    public abstract class AimIKBehaviourBase : MonoBehaviour
     {
         public Transform head;
         public Transform target;
