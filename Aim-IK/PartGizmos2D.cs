@@ -12,7 +12,7 @@ namespace AimIK.Gizmos
 
         public Transform part;
         private Transform exPart;
-        private ChestPart2D chestPart;
+        private Part2D chestPart;
 
         public bool showPartLine;
         public Color partLineColor = Color.blue;
@@ -35,7 +35,7 @@ namespace AimIK.Gizmos
                 // Find the part
                 if (aimIKBehaviour.chestParts.Length > 0)
                 {
-                    foreach (ChestPart2D chestPart in aimIKBehaviour.chestParts)
+                    foreach (Part2D chestPart in aimIKBehaviour.chestParts)
                     {
                         if (chestPart.part == part)
                         {

@@ -30,7 +30,7 @@ namespace AimIK.Gizmos
                 if(showHeadLine)
                 {
                     UnityEngine.Gizmos.color = headLineColor;
-                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.position + aimIKBehaviour.eyesOffset, aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.part.position + aimIKBehaviour.head.offset, aimIKBehaviour.target.position);
                 }
             }
         }
