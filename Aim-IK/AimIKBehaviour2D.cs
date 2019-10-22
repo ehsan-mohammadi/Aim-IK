@@ -41,7 +41,7 @@ namespace AimIK
                 {
                     if (chestPart.part && target) // If chest part and target exists
                     {
-                        chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - chestPart.offset);
+                        chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - chestPart.positionOffset, chestPart.rotationOffset);
                         CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
                     }
                 }
@@ -50,7 +50,7 @@ namespace AimIK
             // If head and target exists
             if (head.part && target)
             {
-                head.part.LookAt2D(new Vector2(target.position.x, target.position.y) - head.offset);
+                head.part.LookAt2D(new Vector2(target.position.x, target.position.y) - head.positionOffset, head.rotationOffset);
                 CheckClamp(head.part, head.limitRotation, head.GetRotation());
             }
         }

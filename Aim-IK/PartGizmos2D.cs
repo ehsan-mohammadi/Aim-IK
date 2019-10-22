@@ -65,7 +65,7 @@ namespace AimIK.Gizmos
                 if (showPartLine)
                 {
                     UnityEngine.Gizmos.color = partLineColor;
-                    UnityEngine.Gizmos.DrawLine(chestPart.part.position + new Vector3(chestPart.offset.x, chestPart.offset.y, 0), aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.DrawLine(chestPart.part.position + new Vector3(chestPart.positionOffset.x, chestPart.positionOffset.y, 0), aimIKBehaviour.target.position);
                 }
             }
         }

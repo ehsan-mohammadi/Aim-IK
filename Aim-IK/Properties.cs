@@ -43,7 +43,8 @@ namespace AimIK.Properties
     public class Part
     {
         public Transform part;
-        public Vector3 offset;
+        public Vector3 positionOffset;
+        public Vector3 rotationOffset;
         public LimitRotation limitRotation;
         private Rotation rotation = new Rotation();
 
@@ -64,7 +65,8 @@ namespace AimIK.Properties
     public class Part2D
     {
         public Transform part;
-        public Vector2 offset;
+        public Vector2 positionOffset;
+        public float rotationOffset;
         public AxisLimitRotation limitRotation;
         private float rotation;
 

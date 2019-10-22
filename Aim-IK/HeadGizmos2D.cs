@@ -29,7 +29,7 @@ namespace AimIK.Gizmos
                 if (showHeadLine)
                 {
                     UnityEngine.Gizmos.color = headLineColor;
-                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.part.position + new Vector3(aimIKBehaviour.head.offset.x, aimIKBehaviour.head.offset.y, 0), aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.part.position + new Vector3(aimIKBehaviour.head.positionOffset.x, aimIKBehaviour.head.positionOffset.y, 0), aimIKBehaviour.target.position);
                 }
             }
         }
