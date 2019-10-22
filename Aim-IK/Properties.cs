@@ -37,16 +37,16 @@ namespace AimIK.Properties
     }
 
     /// <summary>
-    /// The chest part class
+    /// The Part class
     /// </summary>
     [Serializable]
-    public class ChestPart
+    public class Part
     {
         public Transform part;
         public Vector3 offset;
         public LimitRotation limitRotation;
         private Rotation rotation = new Rotation();
-        
+
         /// <summary>
         /// Get the current rotation of the part
         /// </summary>
@@ -58,10 +58,10 @@ namespace AimIK.Properties
     }
 
     /// <summary>
-    /// The 2D chest part class
+    /// The 2D part class
     /// </summary>
     [Serializable]
-    public class ChestPart2D
+    public class Part2D
     {
         public Transform part;
         public Vector2 offset;

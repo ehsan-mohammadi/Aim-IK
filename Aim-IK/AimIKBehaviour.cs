@@ -7,13 +7,8 @@ namespace AimIK
 
     public class AimIKBehaviour : AimIKBehaviourBase
     {
-        public Vector3 eyesOffset;
-
-        public LimitRotation headLimitRotation;
-
-        private Rotation headRotation = new Rotation();
-
-        public ChestPart[] chestParts;
+        public Part head;
+        public Part[] chestParts;
 
         /// <summary>
         /// Check the clamp
@@ -52,7 +47,7 @@ namespace AimIK
             // Check the chest parts
             if(chestParts.Length > 0)
             {
-                foreach(ChestPart chestPart in chestParts)
+                foreach(Part chestPart in chestParts)
                 {
                     if(chestPart.part && target) // If chest part and target exists
                     {
@@ -63,10 +58,10 @@ namespace AimIK
             }
 
             // If head and target exists
-            if(head && target)
+            if(head.part && target)
             {
-                head.LookAt(target.position - eyesOffset);
-                CheckClamp(head, headLimitRotation, headRotation);
+                head.part.LookAt(target.position - head.offset);
+                CheckClamp(head.part, head.limitRotation, head.GetRotation());
             }
         }
     }

@@ -7,13 +7,8 @@ namespace AimIK
 
     public class AimIKBehaviour2D : AimIKBehaviourBase
     {
-        public Vector2 eyesOffset;
-
-        public AxisLimitRotation headLimitRotation;
-
-        private float headRotation;
-
-        public ChestPart2D[] chestParts;
+        public Part2D head;
+        public Part2D[] chestParts;
 
         /// <summary>
         /// Check the 2D clamp
@@ -42,21 +37,21 @@ namespace AimIK
             // Check the chest parts
             if (chestParts.Length > 0)
             {
-                foreach (ChestPart2D chestPart in chestParts)
+                foreach (Part2D chestPart in chestParts)
                 {
                     if (chestPart.part && target) // If chest part and target exists
                     {
-                        chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - eyesOffset);
+                        chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - chestPart.offset);
                         CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
                     }
                 }
             }
 
             // If head and target exists
-            if (head && target)
+            if (head.part && target)
             {
-                head.LookAt2D(new Vector2(target.position.x, target.position.y) - eyesOffset);
-                CheckClamp(head, headLimitRotation, headRotation);
+                head.part.LookAt2D(new Vector2(target.position.x, target.position.y) - head.offset);
+                CheckClamp(head.part, head.limitRotation, head.GetRotation());
             }
         }
     }
