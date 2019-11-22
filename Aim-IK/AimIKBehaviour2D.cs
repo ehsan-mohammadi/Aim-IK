@@ -11,26 +11,7 @@ namespace AimIK
         public Part2D[] chestParts;
 
         /// <summary>
-        /// Check the 2D clamp
-        /// </summary>
-        /// <param name="part">The input part transform</param>
-        /// <param name="limitRotation">The input axis limit rotation</param>
-        /// <param name="rotation">The input 2D rotation</param>
-        private void CheckClamp(Transform part, AxisLimitRotation limitRotation, float rotation)
-        {
-            // Clamp (If activate)
-            if (limitRotation.active)
-                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.min, limitRotation.max);
-            else
-                rotation = part.localEulerAngles.z;
-            
-            // Set rotation variables to part rotation
-            Vector3 partRotation = new Vector3(part.localEulerAngles.x, part.localEulerAngles.y, rotation);
-            part.localEulerAngles = partRotation;
-        }
-
-        /// <summary>
-        /// LateUpdate called after Update and FixedUpdate functions each frames. This function is on top of any animation.
+        /// LateUpdate called after Update and FixedUpdate functions each frames. This function is on top of any animation
         /// </summary>
         private void LateUpdate()
         {
@@ -46,7 +27,7 @@ namespace AimIK
                         else
                             chestPart.part.LookAt2D(new Vector2(target.position.x, target.position.y) - chestPart.positionOffset, chestPart.rotationOffset);
                         
-                        CheckClamp(chestPart.part, chestPart.limitRotation, chestPart.GetRotation());
+                        chestPart.part.CheckClamp2D(chestPart.limitRotation, chestPart.GetRotation());
                     }
                 }
             }
@@ -59,7 +40,7 @@ namespace AimIK
                 else
                     head.part.LookAt2D(new Vector2(target.position.x, target.position.y) - head.positionOffset, head.rotationOffset);
                 
-                CheckClamp(head.part, head.limitRotation, head.GetRotation());
+                head.part.CheckClamp2D(head.limitRotation, head.GetRotation());
             }
         }
     }
