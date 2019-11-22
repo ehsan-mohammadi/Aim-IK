@@ -2,6 +2,8 @@
 
 namespace AimIK.Functions
 {
+    using Properties;
+
     public static class AimIKFunctions
     {
         /// <summary>
@@ -85,6 +87,54 @@ namespace AimIK.Functions
 
             float rotateZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + rotationOffset);
+        }
+
+        /// <summary>
+        /// Check the 3D clamp
+        /// </summary>
+        /// <param name="part">The input part transform</param>
+        /// <param name="limitRotation">The input limit rotation</param>
+        /// <param name="rotation">The input rotation</param>
+        public static void CheckClamp3D(this Transform part, LimitRotation limitRotation, Rotation rotation)
+        {
+            // Clamp (If activate)
+            if (limitRotation.x.active)
+                rotation.x = AimIKFunctions.ClampAngle(part.localEulerAngles.x, limitRotation.x.min, limitRotation.x.max);
+            else
+                rotation.x = part.localEulerAngles.x;
+
+            if (limitRotation.y.active)
+                rotation.y = AimIKFunctions.ClampAngle(part.localEulerAngles.y, limitRotation.y.min, limitRotation.y.max);
+            else
+                rotation.y = part.localEulerAngles.y;
+
+            if (limitRotation.z.active)
+                rotation.z = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.z.min, limitRotation.z.max);
+            else
+                rotation.z = part.localEulerAngles.z;
+
+            // Set rotation variables to part rotation
+            Vector3 partRotation = new Vector3(rotation.x, rotation.y, rotation.z);
+            part.localEulerAngles = partRotation;
+        }
+
+        /// <summary>
+        /// Check the 2D clamp
+        /// </summary>
+        /// <param name="part">The input part transform</param>
+        /// <param name="limitRotation">The input axis limit rotation</param>
+        /// <param name="rotation">The input 2D rotation</param>
+        public static void CheckClamp2D(this Transform part, AxisLimitRotation limitRotation, float rotation)
+        {
+            // Clamp (If activate)
+            if (limitRotation.active)
+                rotation = AimIKFunctions.ClampAngle(part.localEulerAngles.z, limitRotation.min, limitRotation.max);
+            else
+                rotation = part.localEulerAngles.z;
+
+            // Set rotation variables to part rotation
+            Vector3 partRotation = new Vector3(part.localEulerAngles.x, part.localEulerAngles.y, rotation);
+            part.localEulerAngles = partRotation;
         }
     }
 }
