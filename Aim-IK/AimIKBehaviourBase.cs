@@ -2,8 +2,6 @@
 
 namespace AimIK
 {
-    using AimIK.Properties;
-
     [DisallowMultipleComponent]
     public abstract class AimIKBehaviourBase : MonoBehaviour
     {

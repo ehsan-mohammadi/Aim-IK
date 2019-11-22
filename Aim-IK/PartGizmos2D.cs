@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using AimIK;
 
 namespace AimIK.Gizmos
 {
