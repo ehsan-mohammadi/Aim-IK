@@ -7,14 +7,42 @@ namespace AimIK.Gizmos
     [RequireComponent(typeof(AimIKBehaviour2D))]
     public class PartGizmos2D : MonoBehaviour
     {
-        private AimIKBehaviour2D aimIKBehaviour;
+        #region Variables
+            private AimIKBehaviour2D aimIKBehaviour;
 
-        public Transform part;
-        private Transform exPart;
-        private Part2D chestPart;
+            [SerializeField]
+            private Transform part;
 
-        public bool showPartLine;
-        public Color partLineColor = Color.blue;
+            private Transform exPart;
+            
+            private Part2D chestPart;
+
+            [SerializeField]
+            private bool showPartLine;
+
+            [SerializeField]
+            private Color partLineColor = Color.blue;
+        #endregion
+
+        #region SetterGetter
+            public Transform Part
+            {
+                get { return part; }
+                set { part = value; }
+            }
+
+            public bool ShowPartLine
+            {
+                get { return showPartLine; }
+                set { showPartLine = value; }
+            }
+
+            public Color PartLineColor
+            {
+                get { return partLineColor; }
+                set { partLineColor = value; }
+            }
+        #endregion
 
         /// <summary>
         /// The Awake function called first of all
@@ -32,9 +60,9 @@ namespace AimIK.Gizmos
                 bool found = false;
 
                 // Find the part
-                if (aimIKBehaviour.chestParts.Length > 0)
+                if (aimIKBehaviour.ChestParts.Length > 0)
                 {
-                    foreach (Part2D chestPart in aimIKBehaviour.chestParts)
+                    foreach (Part2D chestPart in aimIKBehaviour.ChestParts)
                     {
                         if (chestPart.part == part)
                         {
@@ -64,7 +92,7 @@ namespace AimIK.Gizmos
                 if (showPartLine)
                 {
                     UnityEngine.Gizmos.color = partLineColor;
-                    UnityEngine.Gizmos.DrawLine(chestPart.part.position + new Vector3(chestPart.positionOffset.x, chestPart.positionOffset.y, 0), aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.DrawLine(chestPart.part.position + new Vector3(chestPart.positionOffset.x, chestPart.positionOffset.y, 0), aimIKBehaviour.Target.position);
                 }
             }
         }
