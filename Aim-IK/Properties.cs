@@ -14,7 +14,6 @@ namespace AimIK.Properties
         public float max;
     }
 
-
     /// <summary>
     /// The limit rotation class
     /// </summary>

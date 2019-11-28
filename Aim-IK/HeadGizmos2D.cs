@@ -5,10 +5,29 @@ namespace AimIK.Gizmos
     [RequireComponent(typeof(AimIKBehaviour2D))]
     public class HeadGizmos2D : MonoBehaviour
     {
-        private AimIKBehaviour2D aimIKBehaviour;
+        #region Variables
+            private AimIKBehaviour2D aimIKBehaviour;
 
-        public bool showHeadLine = false;
-        public Color headLineColor = Color.blue;
+            [SerializeField]
+            private bool showHeadLine = false;
+
+            [SerializeField]
+            private Color headLineColor = Color.blue;
+        #endregion
+
+        #region SetterGetter
+            public bool ShowHeadLine
+            {
+                get { return showHeadLine; }
+                set { showHeadLine = value; }
+            }
+
+            public Color HeadLineColor
+            {
+                get { return headLineColor; }
+                set { headLineColor = value; }
+            }
+        #endregion
 
         /// <summary>
         /// The Awake function called first of all
@@ -29,7 +48,7 @@ namespace AimIK.Gizmos
                 if (showHeadLine)
                 {
                     UnityEngine.Gizmos.color = headLineColor;
-                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.head.part.position + new Vector3(aimIKBehaviour.head.positionOffset.x, aimIKBehaviour.head.positionOffset.y, 0), aimIKBehaviour.target.position);
+                    UnityEngine.Gizmos.DrawLine(aimIKBehaviour.Head.part.position + new Vector3(aimIKBehaviour.Head.positionOffset.x, aimIKBehaviour.Head.positionOffset.y, 0), aimIKBehaviour.Target.position);
                 }
             }
         }
