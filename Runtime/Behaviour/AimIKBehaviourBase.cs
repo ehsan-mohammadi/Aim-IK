@@ -30,7 +30,23 @@ namespace AimIK.Behaviour
             set { smoothTime = value; }
         }
 
+        public Vector3 SmoothTarget
+        {
+            get { return smoothTarget; }
+        }
+
+        private void SmoothMovement ()
+        {
+            if (isSmoothLookAt && target)
+                smoothTarget = Vector3.Lerp(smoothTarget, target.position, smoothTime);
+        }
+
         protected abstract void Aim ();
+
+        private void Update ()
+        {
+            SmoothMovement();
+        }
 
         private void LateUpdate ()
         {

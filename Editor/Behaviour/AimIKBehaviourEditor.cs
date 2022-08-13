@@ -16,6 +16,8 @@ namespace AimIK.Editor
             private SerializedProperty targetPoint;
             private SerializedProperty isSmoothLookAt;
             private SerializedProperty smoothTime;
+            private SerializedProperty head;
+            private SerializedProperty spines;
         #endregion
 
         private void OnEnable ()
@@ -25,12 +27,17 @@ namespace AimIK.Editor
             targetPoint = serializedObject.FindProperty("target");
             isSmoothLookAt = serializedObject.FindProperty("isSmoothLookAt");
             smoothTime = serializedObject.FindProperty("smoothTime");
+            head = serializedObject.FindProperty("head");
+            spines = serializedObject.FindProperty("spines");
         }
 
         public override void OnInspectorGUI ()
         {
             serializedObject.Update();
             EditorGUILayout.PropertyField(targetPoint);
+
+            EditorGUILayout.PropertyField(head);
+            EditorGUILayout.PropertyField(spines, true);
 
             smoothLookAtGroup = EditorGUILayout
                 .BeginFoldoutHeaderGroup(smoothLookAtGroup, "Smooth Look At");
@@ -41,7 +48,6 @@ namespace AimIK.Editor
                     EditorGUILayout.PropertyField(smoothTime);
             }
             EditorGUILayout.EndFoldoutHeaderGroup();
-
             serializedObject.ApplyModifiedProperties();
         }
     }
