@@ -1,0 +1,23 @@
+{
+    "name": "com.poprockgames.aim-ik",
+    "version": "3.0",
+    "displayName": "Aim IK",
+    "description": "A Unity package, to procedurally orientate the character's head (and chest) in a direction without using any animation data.",
+    "documentationUrl": "https://github.com/ehsan-mohammadi/Aim-IK",
+    "unity": "2020.3",
+    "unityRelease": "29f1",
+    "keywords": [
+        "aim",
+        "ik",
+        "inverse kinematics"
+    ],
+    "author": {
+        "name": "Ehsan Mohammadi",
+        "email": "mohammadi.ehsan1994@gmail.com",
+        "url": "https://github.com/ehsan-mohammadi"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ehsan-mohammadi/Aim-IK.git"
+    }
+}
