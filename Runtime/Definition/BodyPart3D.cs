@@ -10,6 +10,6 @@ namespace AimIK.Definition
         public Vector3 PositionOffset;
         public Vector3 RotationOffset;
         public LimitRotation LimitRotation;
-        public Vector3 Rotation;
+        public Vector3 Rotation { get; set; }
     }
 }
