@@ -1,6 +1,6 @@
 # Aim-IK
 
->A Unity-3D library, to procedural orientate character head (and spine) in a direction without using any animation data.
+>A Unity package, to procedurally orientate the character's head (and spine) in a direction without using any animation data.
 
 [![License](https://img.shields.io/github/license/ehsan-mohammadi/Aim-IK?color=%23fc505e&label=License)](../master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/ehsan-mohammadi/Aim-IK?include_prereleases&color=%23fc505e&label=Release)](https://github.com/ehsan-mohammadi/Aim-IK/releases/tag/Version-3.0)
