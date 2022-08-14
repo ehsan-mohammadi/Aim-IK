@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 743262972}
   isSmoothLookAt: 1
-  smoothTime: 0.02
+  smoothTime: 0.01
   head:
     Bone: {fileID: 7757438195355189590}
     PositionOffset: {x: 0, y: 0, z: 0}
