@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7a08f6641acb94dbcb9a888641624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inverse: 1
+  movementFactor: -0.5
 --- !u!23 &637595555
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7a08f6641acb94dbcb9a888641624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inverse: 0
+  movementFactor: 0.5
 --- !u!23 &743262970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2173,9 +2173,9 @@ MonoBehaviour:
         IsLimitRotation: 0
         Min: 0
         Max: 0
-    gizmos:
-      IsShow: 1
-      Color: {r: 0, g: 0, b: 1, a: 1}
+    Gizmos:
+      IsShow: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
   spines:
   - Bone: {fileID: 8499362444344328402}
     PositionOffset: {x: 0, y: 0, z: 0}
@@ -2193,9 +2193,9 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: -5
         Max: 5
-    gizmos:
-      IsShow: 1
-      Color: {r: 1, g: 0, b: 0, a: 1}
+    Gizmos:
+      IsShow: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
   - Bone: {fileID: 3093534716191380538}
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0}
@@ -2212,9 +2212,9 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: -10
         Max: 10
-    gizmos:
-      IsShow: 1
-      Color: {r: 1, g: 1, b: 0, a: 1}
+    Gizmos:
+      IsShow: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
   - Bone: {fileID: 4563612184292467793}
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0}
@@ -2231,9 +2231,9 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: 0
         Max: 0
-    gizmos:
-      IsShow: 1
-      Color: {r: 0, g: 1, b: 0, a: 1}
+    Gizmos:
+      IsShow: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &3927339723450009969
 MonoBehaviour:
   m_ObjectHideFlags: 0

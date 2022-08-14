@@ -4,7 +4,7 @@ namespace Sample
 {
     public class UpDownMovement : MonoBehaviour
     {
-        [SerializeField] private bool inverse = false;
+        [SerializeField] private float movementFactor = 0.5f;
         private Vector3 offset;
         private float movement;
 
@@ -15,7 +15,7 @@ namespace Sample
 
         private void Update ()
         {
-            movement = (inverse ? 1 : -1) * Mathf.Sin(Time.time) * 0.5f;
+            movement = Mathf.Sin(Time.time) * movementFactor;
         }
 
         private void FixedUpdate ()
