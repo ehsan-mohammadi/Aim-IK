@@ -56,18 +56,18 @@ namespace AimIK.Behaviour
         {
             #if UNITY_EDITOR
             
-            if (head.gizmos.IsShow)
+            if (head.Gizmos.IsShow)
             {
-                UnityEngine.Gizmos.color = head.gizmos.Color;
+                UnityEngine.Gizmos.color = head.Gizmos.Color;
                 UnityEngine.Gizmos.DrawLine(head.Bone.position 
                     + head.PositionOffset, Target.position);
             }
 
             foreach (BodyPart3D spine in spines)
             {
-                if (spine.gizmos.IsShow)
+                if (spine.Gizmos.IsShow)
                 {
-                    UnityEngine.Gizmos.color = spine.gizmos.Color;
+                    UnityEngine.Gizmos.color = spine.Gizmos.Color;
                     UnityEngine.Gizmos.DrawLine(spine.Bone.position 
                         + spine.PositionOffset, Target.position);
                 }
