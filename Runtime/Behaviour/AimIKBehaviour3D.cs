@@ -63,13 +63,16 @@ namespace AimIK.Behaviour
                     + head.PositionOffset, Target.position);
             }
 
-            foreach (BodyPart3D spine in spines)
+            if (spines != null)
             {
-                if (spine.Bone && Target && spine.Gizmos.IsShow)
+                foreach (BodyPart3D spine in spines)
                 {
-                    UnityEngine.Gizmos.color = spine.Gizmos.Color;
-                    UnityEngine.Gizmos.DrawLine(spine.Bone.position 
-                        + spine.PositionOffset, Target.position);
+                    if (spine.Bone && Target && spine.Gizmos.IsShow)
+                    {
+                        UnityEngine.Gizmos.color = spine.Gizmos.Color;
+                        UnityEngine.Gizmos.DrawLine(spine.Bone.position 
+                            + spine.PositionOffset, Target.position);
+                    }
                 }
             }
 
