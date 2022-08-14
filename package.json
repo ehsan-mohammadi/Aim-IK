@@ -1,6 +1,6 @@
 {
     "name": "com.poprockgames.aim-ik",
-    "version": "3.0",
+    "version": "3.0.0",
     "displayName": "Aim IK",
     "description": "A Unity package, to procedurally orientate the character's head (and chest) in a direction without using any animation data.",
     "documentationUrl": "https://github.com/ehsan-mohammadi/Aim-IK",
