@@ -42,6 +42,7 @@ namespace AimIK.Behaviour
         }
 
         protected abstract void Aim ();
+        protected abstract void Gizmos ();
 
         private void Update ()
         {
@@ -51,6 +52,11 @@ namespace AimIK.Behaviour
         private void LateUpdate ()
         {
             Aim();
+        }
+
+        private void OnDrawGizmos ()
+        {
+            Gizmos();
         }
     }
 }

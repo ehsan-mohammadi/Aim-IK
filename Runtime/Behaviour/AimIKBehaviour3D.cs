@@ -51,5 +51,29 @@ namespace AimIK.Behaviour
                 head.Bone.CheckClamp3D(head.LimitRotation, head.Rotation);
             }
         }
+
+        protected override void Gizmos ()
+        {
+            #if UNITY_EDITOR
+            
+            if (head.gizmos.IsShow)
+            {
+                UnityEngine.Gizmos.color = head.gizmos.Color;
+                UnityEngine.Gizmos.DrawLine(head.Bone.position 
+                    + head.PositionOffset, Target.position);
+            }
+
+            foreach (BodyPart3D spine in spines)
+            {
+                if (spine.gizmos.IsShow)
+                {
+                    UnityEngine.Gizmos.color = spine.gizmos.Color;
+                    UnityEngine.Gizmos.DrawLine(spine.Bone.position 
+                        + spine.PositionOffset, Target.position);
+                }
+            }
+
+            #endif
+        }
     }
 }
