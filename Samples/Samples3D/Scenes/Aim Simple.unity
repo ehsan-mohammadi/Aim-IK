@@ -1985,7 +1985,7 @@ MonoBehaviour:
         IsLimitRotation: 0
         Min: 0
         Max: 0
-    gizmos:
+    Gizmos:
       IsShow: 1
       Color: {r: 0, g: 0, b: 1, a: 1}
   spines:
@@ -2005,7 +2005,7 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: -5
         Max: 5
-    gizmos:
+    Gizmos:
       IsShow: 1
       Color: {r: 1, g: 0, b: 0, a: 1}
   - Bone: {fileID: 3093534716191380538}
@@ -2024,7 +2024,7 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: -10
         Max: 10
-    gizmos:
+    Gizmos:
       IsShow: 1
       Color: {r: 1, g: 1, b: 0, a: 1}
   - Bone: {fileID: 4563612184292467793}
@@ -2043,7 +2043,7 @@ MonoBehaviour:
         IsLimitRotation: 1
         Min: 0
         Max: 0
-    gizmos:
+    Gizmos:
       IsShow: 1
       Color: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &4061962098632078968
