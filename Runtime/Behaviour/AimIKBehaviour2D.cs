@@ -71,7 +71,7 @@ namespace AimIK.Behaviour
                 {
                     UnityEngine.Gizmos.color = spine.Gizmos.Color;
                     UnityEngine.Gizmos.DrawLine(new Vector2(spine.Bone.position.x
-                        , head.Bone.position.y)+ spine.PositionOffset, Target.position);
+                        , spine.Bone.position.y)+ spine.PositionOffset, Target.position);
                 }
             }
 
