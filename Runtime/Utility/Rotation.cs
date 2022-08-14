@@ -120,11 +120,11 @@ namespace AimIK.Utility
         /// <param name="limitRotation">The input axis limit rotation</param>
         /// <param name="rotation">The input 2D rotation</param>
         public static void CheckClamp2D(this Transform bone
-            , LimitRotation limitRotation, float rotation)
+            , LimitRotationAxis limitRotation, float rotation)
         {
-            if (limitRotation.ZAxis.IsLimitRotation)
+            if (limitRotation.IsLimitRotation)
                 rotation = ClampAngle(bone.localEulerAngles.z
-                    , limitRotation.ZAxis.Min, limitRotation.ZAxis.Max);
+                    , limitRotation.Min, limitRotation.Max);
             else
                 rotation = bone.localEulerAngles.z;
 

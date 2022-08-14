@@ -8,5 +8,9 @@ namespace AimIK.Definition
     {
         public Transform Bone;
         public Vector2 PositionOffset;
+        public float RotationOffset;
+        public LimitRotationAxis LimitRotation;
+        public Gizmos Gizmos;
+        public float Rotation { get; set; }
     }
 }
