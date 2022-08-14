@@ -56,7 +56,7 @@ namespace AimIK.Behaviour
         {
             #if UNITY_EDITOR
             
-            if (head.Gizmos.IsShow)
+            if (head.Bone && Target && head.Gizmos.IsShow)
             {
                 UnityEngine.Gizmos.color = head.Gizmos.Color;
                 UnityEngine.Gizmos.DrawLine(head.Bone.position 
@@ -65,7 +65,7 @@ namespace AimIK.Behaviour
 
             foreach (BodyPart3D spine in spines)
             {
-                if (spine.Gizmos.IsShow)
+                if (spine.Bone && Target && spine.Gizmos.IsShow)
                 {
                     UnityEngine.Gizmos.color = spine.Gizmos.Color;
                     UnityEngine.Gizmos.DrawLine(spine.Bone.position 
