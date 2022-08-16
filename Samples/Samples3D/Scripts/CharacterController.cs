@@ -1,7 +1,7 @@
 using UnityEngine;
 using AimIK.Behaviour;
 
-namespace Sample
+namespace Sample3D
 {
     public class CharacterController : MonoBehaviour
     {

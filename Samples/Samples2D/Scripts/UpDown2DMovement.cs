@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Sample
+namespace Sample2D
 {
-    public class UpDownMovement : MonoBehaviour
+    public class UpDown2DMovement : MonoBehaviour
     {
         [SerializeField] private float movementFactor = 0.5f;
         private Vector3 offset;
