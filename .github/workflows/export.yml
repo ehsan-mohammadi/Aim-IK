@@ -1,0 +1,30 @@
+name: Export Unity Package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        mkdir -p Assets/Aim-IK
+        rsync -a --exclude Assets * ./Assets/Aim-IK
+        printf "fileFormatVersion: 2\nguid: eec8b141740da6841b979c8fb66a8a16\nfolderAsset: yes\nDefaultImporter:\n  externalObjects: {}\n  userData: \n  assetBundleName: \n  assetBundleVariant: " > ./Assets/Aim-IK.meta
+        echo "Assets/Aim-IK.meta" > metaList
+        find Assets/Aim-IK/ -name \*.meta >> metaList
+
+    - run: mkdir export
+
+    - uses: pCYSl5EDgo/create-unitypackage@master
+      with:
+        package-path: 'export/Aim-IK.unitypackage'
+        include-files: metaList
+    - uses: actions/upload-artifact@master
+      with:
+        path: export
+        name: Aim-IK
