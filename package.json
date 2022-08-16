@@ -19,5 +19,17 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/ehsan-mohammadi/Aim-IK.git"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Sample 2D",
+            "description": "2D Samples of using Aim-IK on sprites and 2D rigged models.",
+            "path": "Samples/Samples2D"
+        },
+        {
+            "displayName": "Sample 3D",
+            "description": "3D Samples of using Aim-IK on 3D rigged models.",
+            "path": "Samples/Samples3D"
+        }
+    ]
 }
